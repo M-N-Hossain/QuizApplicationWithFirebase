@@ -1,5 +1,13 @@
+import "./globalStyles/app.css";
+import Layout from "./components/Layout";
+import Home from "./components/pages/Home";
+
 function App() {
-  return <div className="App">Hello World</div>;
+  return (
+    <Layout>
+      <Home />
+    </Layout>
+  );
 }
 
 export default App;
