@@ -1,7 +1,7 @@
 import React from "react";
 
 // internal import
-import "./account.css";
+import "../../styles/account.css";
 
 export default function Account() {
   return (

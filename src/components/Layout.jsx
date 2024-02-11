@@ -2,8 +2,8 @@
 import React from "react";
 
 // internal import
-import Navbar from "./navbar/nav/Navbar";
-import "../globalStyles/layout.css";
+import Navbar from "./navbar/Navbar";
+import "../styles/layout.css";
 
 export default function ({ children }) {
   return (

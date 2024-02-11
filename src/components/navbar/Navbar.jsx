@@ -1,9 +1,9 @@
 import React from "react";
 
 // internal import
-import "../nav.css";
-import Account from "../account/Account";
-import logo from "../../../assets/images/logo-bg.png";
+import "../../styles/navbar.css";
+import Account from "./Account";
+import logo from "../../assets/images/logo-bg.png";
 
 export default function () {
   return (
