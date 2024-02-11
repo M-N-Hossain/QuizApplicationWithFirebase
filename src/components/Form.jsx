@@ -4,7 +4,7 @@ import "../styles/form.css";
 
 export default function Form({ children, className, ...rest }) {
   return (
-    <form className="signup form" action="#" {...rest}>
+    <form className={`${className} form`} action="#" {...rest}>
       {children}
     </form>
   );
