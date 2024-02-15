@@ -1,3 +1,5 @@
+// external import
+import { Route, Routes } from "react-router-dom";
 // internal import
 import "./styles/app.css";
 import Layout from "./components/Layout";
@@ -10,11 +12,13 @@ import Result from "./components/pages/Result";
 function App() {
   return (
     <Layout>
-      {/* <Home /> */}
-      {/* <SignUp /> */}
-      {/* <Login /> */}
-      {/* <Quiz /> */}
-      <Result />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/result" element={<Result />} />
+      </Routes>
     </Layout>
   );
 }
