@@ -5,6 +5,7 @@ import Home from "./components/pages/Home";
 import SignUp from "./components/pages/SignUp";
 import Login from "./components/pages/Login";
 import Quiz from "./components/pages/Quiz";
+import Result from "./components/pages/Result";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       {/* <Home /> */}
       {/* <SignUp /> */}
       {/* <Login /> */}
-      <Quiz />
+      {/* <Quiz /> */}
+      <Result />
     </Layout>
   );
 }
