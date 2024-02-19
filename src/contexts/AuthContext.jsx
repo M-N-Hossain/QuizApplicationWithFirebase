@@ -9,7 +9,7 @@ import {
 } from "firebase/auth";
 
 // internal import
-import "../../firbase.js";
+import "../firbase.js";
 
 const AuthContext = React.createContext();
 
