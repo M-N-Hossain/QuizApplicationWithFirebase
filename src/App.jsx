@@ -7,7 +7,7 @@ import SignUp from "./components/pages/SignUp";
 import Login from "./components/pages/Login";
 import Quiz from "./components/pages/Quiz";
 import Result from "./components/pages/Result";
-import AuthProvider from "./contexts/AuthContext";
+import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
   return (

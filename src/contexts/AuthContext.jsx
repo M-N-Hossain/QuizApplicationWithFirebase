@@ -17,7 +17,7 @@ export function useAuth() {
   return useContext(AuthContext);
 }
 
-export default function AuthProvider({ children }) {
+export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [currentUser, setCurrentUser] = useState(null);
 
@@ -26,9 +26,9 @@ export default function AuthProvider({ children }) {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
       setLoading(false);
-
-      return () => unsubscribe();
     });
+
+    return () => unsubscribe();
   }, []);
 
   // signup function
@@ -36,8 +36,16 @@ export default function AuthProvider({ children }) {
     try {
       const auth = getAuth();
       await createUserWithEmailAndPassword(auth, email, password);
-      await updateProfile(auth.currentUser, { displayName: username });
-      setCurrentUser(auth.currentUser);
+
+      // update profile
+      await updateProfile(auth.currentUser, {
+        displayName: username,
+      });
+
+      const user = auth.currentUser;
+      setCurrentUser({
+        ...user,
+      });
     } catch (error) {
       console.error("Error signing up:", error);
       throw error;
