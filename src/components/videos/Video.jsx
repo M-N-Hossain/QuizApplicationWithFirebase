@@ -4,15 +4,19 @@ import React from "react";
 import "./video.css";
 import image from "../../assets/images/3.jpg";
 
-export default function Video() {
+export default function Video({ title, id, noq }) {
   return (
-      <div className="video">
-        <img src={image} alt="Video title" />
-        <p>#23 React Hooks Bangla - React useReducer hook Bangla</p>
-        <div className="qmeta">
-          <p>10 Questions</p>
-          <p>Score : Not taken yet</p>
-        </div>
+    <div className="video">
+      <img
+        // youtbe API to get vidoes thumbnile
+        src={`http://img.youtube.com/vi/${id}/maxresdefault.jpg`}
+        alt={title}
+      />
+      <p>{title}</p>
+      <div className="qmeta">
+        <p>{noq} Questions</p>
+        <p>Total Points : {noq * 5}</p>
       </div>
+    </div>
   );
 }
